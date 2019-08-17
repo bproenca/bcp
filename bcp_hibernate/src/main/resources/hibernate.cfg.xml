@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
+        <!--<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hb</property>-->
+        <!--<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>-->
+        <!--<property name="hibernate.connection.username">root</property>-->
+        <!--<property name="hibernate.connection.password">root</property>-->
+        <!--<property name="hibernate.show_sql">true</property>-->
+        <!--<property name="hibernate.format_sql">true</property>-->
+        <!--<property name="hibernate.hbm2ddl.auto">create-drop</property>-->
+
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+        <property name="hibernate.connection.username">BCP</property>
+        <property name="hibernate.connection.password">BCP</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!--<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>-->
+        <!--<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/bcp</property>-->
+        <!--<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>-->
+        <!--<property name="hibernate.connection.username">bcp</property>-->
+        <!--<property name="hibernate.connection.password">bcp</property>-->
+        <!--<property name="hibernate.show_sql">true</property>-->
+        <!--<property name="hibernate.format_sql">true</property>-->
+        <!--<property name="hibernate.hbm2ddl.auto">update</property>-->
+
+        <!--<property name="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</property>-->
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory
+        </property>
+        <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+
+
+        <!--
+        <property name="c3p0.min_size">20</property>
+        <property name="c3p0.max_size">75</property>
+        <property name="c3p0.timeout">180</property>
+        <property name="c3p0.maxIdleTime">300</property>
+        <property name="c3p0.idle_test_period">100</property>
+        -->
+
+        <mapping class="br.com.bcp.Contato"/>
+        <mapping class="br.com.bcp.Instrucao"/>
+        <mapping class="br.com.bcp.cascade.Pai"/>
+        <mapping class="br.com.bcp.cascade.Filho"/>
+    </session-factory>
+</hibernate-configuration>
