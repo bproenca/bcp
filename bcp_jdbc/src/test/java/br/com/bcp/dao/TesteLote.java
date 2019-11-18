@@ -1,4 +1,4 @@
-package br.com.bcp;
+package br.com.bcp.dao;
 
 import br.com.bcp.dao.ConnectionFactory;
 import br.com.bcp.dao.OraclePedidoDAO;

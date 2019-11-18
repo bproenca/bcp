@@ -1,4 +1,4 @@
-package br.com.bcp;
+package br.com.bcp.dao;
 
 import java.sql.Date;
 

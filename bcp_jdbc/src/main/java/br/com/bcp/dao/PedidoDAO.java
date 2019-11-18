@@ -1,7 +1,5 @@
 package br.com.bcp.dao;
 
-import br.com.bcp.Pedido;
-
 import java.sql.SQLException;
 import java.util.List;
 

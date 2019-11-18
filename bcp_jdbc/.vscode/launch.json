@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CheckMetadata2",
+            "request": "launch",
+            "mainClass": "br.com.bcp.metadata.CheckMetadata2",
+            "projectName": "bcp_jdbc"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CheckMetadata1",
+            "request": "launch",
+            "mainClass": "br.com.bcp.metadata.CheckMetadata1",
+            "projectName": "bcp_jdbc"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CheckColumnsType",
+            "request": "launch",
+            "mainClass": "br.com.bcp.metadata.CheckColumnsType",
+            "projectName": "bcp_jdbc"
+        }
+    ]
+}

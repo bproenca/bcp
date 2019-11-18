@@ -1,8 +1,5 @@
 package br.com.bcp.dao;
 
-import br.com.bcp.ControleLote;
-import br.com.bcp.Pedido;
-
 import java.sql.*;
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package br.com.bcp;
+package br.com.bcp.metadata;
 
 import java.sql.*;
 
-public class tRUNCtEST {
+public class CheckMetadata1 {
 
     public static void main(String[] args) throws Throwable {
         String url;
@@ -10,15 +10,15 @@ public class tRUNCtEST {
         String usuario;
         String senha;
 
-        url = "jdbc:oracle:thin:@ca-db03:1521:prod";
+        url = "jdbc:oracle:thin:@localhost:1522:xe";
         driver = "oracle.jdbc.OracleDriver";
-        usuario = "SFW_CS_01";
-        senha = "SFW5024";
+        usuario = "BCP";
+        senha = "BCP";
         Class.forName(driver);
         System.out.println("Conectando ao banco");
         final Connection connection = DriverManager.getConnection(url, usuario, senha);
 
-        PreparedStatement preparedStatement = connection.prepareStatement("select * from V_INSIGHT_FIS_CTRL_ENC");
+        PreparedStatement preparedStatement = connection.prepareStatement("select * from PEDIDOS where 1 = 2");
         int colCount = preparedStatement.getMetaData().getColumnCount();
         for (int i = 1; i <= colCount; i++) {
             System.out.println("\tgetColumnName(" + i + ") " + preparedStatement.getMetaData().getColumnName(i));
