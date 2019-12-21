@@ -30,7 +30,7 @@ public class ConnectionFactory {
                 usuario = "BCP";
                 senha = "BCP";
             } else if (POSTGRESQL.equalsIgnoreCase(database)) {
-                url = "jdbc:postgresql://localhost:5432/bcpdb";
+                url = "jdbc:postgresql://172.17.0.2:5432/bcpdb";
                 driver = "org.postgresql.Driver";
                 usuario = "bcp";
                 senha = "bcp";

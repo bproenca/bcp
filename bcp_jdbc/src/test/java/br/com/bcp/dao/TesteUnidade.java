@@ -25,7 +25,7 @@ public class TesteUnidade {
 
     @Before
     public void before() throws SQLException {
-        dao = ConnectionFactory.buildDAO(ConnectionFactory.ORACLE);
+        dao = ConnectionFactory.buildDAO(ConnectionFactory.POSTGRESQL);
     }
 
     @Test
