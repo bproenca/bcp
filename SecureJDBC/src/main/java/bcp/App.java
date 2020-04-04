@@ -36,11 +36,11 @@ public class App {
         connectionProps.put("user", username);
         connectionProps.put("password", password);
         connectionProps.put("encrypt", "true");
-        connectionProps.put("validateCertificate", "true");
-        connectionProps.put("trustStore", trustStorePath);
-        connectionProps.put("trustStorePassword", trustStorePassword);
-        connectionProps.put("trustStoreType", "JKS");
-
+        //connectionProps.put("validateCertificate", "true");
+        //connectionProps.put("trustStore", trustStorePath);
+        //connectionProps.put("trustStorePassword", trustStorePassword);
+        //connectionProps.put("trustStoreType", "JKS");
+        
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(
@@ -55,7 +55,11 @@ public class App {
     private void runQuery(Connection conn) {
         try {
             Statement stmt = conn.createStatement();
+<<<<<<< HEAD
             ResultSet rs = stmt.executeQuery("select now() from dummy");
+=======
+            ResultSet rs = stmt.executeQuery("select now() from dummy;");
+>>>>>>> a5b64b3f9181357ac4645a386d0078b5b6ce8d2c
             ResultSetMetaData rsmd = rs.getMetaData();
 
             for (int i = 1; i <= rsmd.getColumnCount(); i++) {
@@ -70,6 +74,7 @@ public class App {
             }
 
         } catch (SQLException e) {
+            e.printStackTrace();
             System.err.println("Query failed!");
         }
     }
